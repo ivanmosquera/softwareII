@@ -5,7 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {createHashHistory} from 'history';
 import AppRoutes from './AppRoutes';
 import Header from './components/Main'; // Our custom react component
-
+import RoomTypesShow from './components/pages/tipos-habitacion/Page';
 
 // Helpers for debugging
 window.React = React;
@@ -19,10 +19,6 @@ injectTapEventPlugin();
 
 // Render the main app react component into the app div.
 // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
-ReactDOM.render(<Router
-    history= {useRouterHistory(createHashHistory)({queryKey:false})}
-    onUpdate={()=>window.scrollTo(0,0)}
->
-{AppRoutes}
-</Router>,
+ReactDOM.render(<RoomTypesShow />
+,
  document.getElementById('app'));
